@@ -42,7 +42,7 @@
 }
 
 body {
-  background-image: url("src/assets/img/background.webp");
+  background-image: url("./img/background.webp");
   background-color: #cccccc;
   background-size: cover;
   color: #ffbfb3;
