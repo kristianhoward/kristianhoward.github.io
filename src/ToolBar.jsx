@@ -1,6 +1,6 @@
 import {github_link, github_path, linkedin_link, linkedin_path} from "./constants.js";
 import {HoverImageWithBadge} from "./HomeContext.jsx";
-import {HoverImage} from "./ProjectContext.jsx";
+import {HoverImage} from "./HoverImage.jsx";
 
 
 export function SkillsBar({ skillList, nameList, proficiencyList }) {

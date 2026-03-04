@@ -14,13 +14,25 @@ import qaAlt from "./assets/img/qa_alt.png"
 import pytestAlt from "./assets/img/pytest_alt.png"
 import linkedinPath from "./assets/img/linkedin_alt.png"
 import githubPath from "./assets/img/github_alt.png"
-import rcodPath from "./assets/img/rcod_1.png"
+import rcodScreenShot1 from "./assets/img/rcod_1.png"
+import rcodScreenShot2 from "./assets/img/rcod_2.png"
+import rcodScreenShot3 from "./assets/img/rcod_3.png"
+import rcodScreenShot4 from "./assets/img/rcod_4.png"
+import rcodTeaser1 from "./assets/img/rcod_teaser_1.gif"
+import rcodTeaser2 from "./assets/img/rcod_teaser_2.gif"
+import rcodTeaser3 from "./assets/img/rcod_teaser_3.gif"
+import rcodTeaser4 from "./assets/img/rcod_teaser_4.gif"
 import dndPath from "./assets/img/dnddisplay.png"
 import mapPath from "./assets/img/mapvalidation.png"
 import automationPath from "./assets/img/automation.png"
 import qaPath from "./assets/img/qa.png";
 import unityPath from "./assets/img/unity.png"
 import pythonPath from "./assets/img/python.png"
+import fatherPath from "./assets/img/father_alt.png"
+import blockBuilderPath from "./assets/img/block_builder_alt.png"
+import jokeTellerPath from "./assets/img/dad_joke_alt.png"
+import ballPath from "./assets/img/ball_alt.png"
+import gameDevPath from "./assets/img/game_dev_alt.png"
 
 export const unity_img_path = unityPath;
 export const python_img_path = pythonPath;
@@ -39,6 +51,11 @@ export const javascript_alt_path = javascriptAlt;
 export const tornado_alt_path = tornadoAlt;
 export const qa_alt_path = qaAlt;
 export const pytest_alt_path = pytestAlt;
+export const father_alt_path = fatherPath;
+export const block_builder_alt_path = blockBuilderPath;
+export const dad_joke_alt_path = jokeTellerPath;
+export const ball_alt_path = ballPath;
+export const game_dev_alt_path = gameDevPath;
 
 export const technologies = {
     "Unity": unity_alt_path,
@@ -64,16 +81,25 @@ export const linkedin_link = "https://www.linkedin.com/in/kristian-howard-jr/"
 export const github_link = "https://github.com/kristianhoward"
 
 export const home_display_img_paths = [
-    rcodPath,
+    rcodTeaser3,
     dndPath,
     mapPath,
     automationPath
 ]
 
-export const imageNames = [
+export const home_display_img_names = [
     "Rogue Cards of Dungeon",
     "Pi DnD Display",
     "GIS Map Validation",
     "Traffic Signal Controller Automation"
 ]
 export const qa_img_path = qaPath;
+
+export const rcod_screenshot_1_path = rcodScreenShot1;
+export const rcod_screenshot_2_path = rcodScreenShot2;
+export const rcod_screenshot_3_path = rcodScreenShot3;
+export const rcod_screenshot_4_path = rcodScreenShot4;
+export const rcod_teaser_1_gif_path = rcodTeaser1;
+export const rcod_teaser_2_gif_path = rcodTeaser2;
+export const rcod_teaser_3_gif_path = rcodTeaser3;
+export const rcod_teaser_4_gif_path = rcodTeaser4;

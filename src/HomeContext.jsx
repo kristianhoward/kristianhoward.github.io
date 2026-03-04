@@ -1,10 +1,10 @@
 import {CyclingImage} from "./CyclingImage.jsx";
 import {useState} from "react";
 import {
-    csharp_alt_path,
+    csharp_alt_path, father_alt_path, home_display_img_paths, home_display_img_names,
     javascript_alt_path,
     playwright_alt_path,
-    python_alt_path, qa_alt_path,
+    python_alt_path,
     selenium_alt_path, sql_alt_path, unity_alt_path,
 } from "./constants.js";
 import {SkillsBar, SocialMediaBar} from "./ToolBar.jsx";
@@ -30,26 +30,26 @@ export function Home() {
                             <h1 className="text-2xl font-bold pt-4 pl-4 ">
                                 Kristian Howard Jr
                             </h1>
-                            <h2 className="text-1xl font-bold pl-4">Flexible Engineer focused on scalable systems solutions</h2>
+                            <h2 className="text-1xl font-bold pl-4">SDET with 7 years experience focused on scalable systems solutions</h2>
                         </li>
                         <li>
                             <h1 className="text-3xl font-bold pt-6">
-                                Role
+                                Current Role
                             </h1>
                             <hr className="w-full border-pink-300"/>
                         </li>
                         <li>
                             <div className="flex items-center gap-4 pt-8">
-                                <img className="w-24 h-24 border-2 border-rose-300 shadow-[0_0_25px_rgba(255,120,0,0.6)] focus:outline-none focus:ring-0" src={qa_alt_path} alt="qa engineer" />
+                                <img className="w-24 h-24 border-2 border-rose-300 shadow-[0_0_25px_rgba(255,120,0,0.6)] focus:outline-none focus:ring-0" src={father_alt_path} alt="father" />
                                 <ul>
                                     <li>
                                         <h1 className="inline text-3xl font-bold pt-10">
-                                            SDET
+                                            Dad
                                         </h1>
                                     </li>
                                     <li>
                                         <h1 className="text-3xl font-bold">
-                                            Years Experience: 7
+                                            Years Experience: 1
                                         </h1>
                                     </li>
                                 </ul>
@@ -82,6 +82,8 @@ export function Home() {
                 </div>
                 <div className="justify-start">
                     <CyclingImage
+                        images={home_display_img_paths}
+                        imagesNames={home_display_img_names}
                         hoveredIndex={hoveredIndex}
                     />
                     <h1 className="text-3xl font-bold pt-5">
@@ -109,7 +111,7 @@ export function ProficiencyBadge({ children }) {
     )
 }
 
-export function HoverImageWithBadge( { path, name, children}) {
+export function HoverImageWithBadge( { path, name, children }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (

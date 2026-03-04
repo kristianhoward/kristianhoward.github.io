@@ -2,10 +2,11 @@ import {ContextFireButton, FireButton} from "./AnimatedButton.jsx";
 import {CyclingImage} from "./CyclingImage.jsx";
 import {
     github_link, github_path,
-    home_display_img_paths,
+    home_display_img_paths, home_display_img_names,
     python_img_path,
     technologies,
-    unity_img_path
+    unity_img_path, rcod_teaser_1_gif_path, rcod_teaser_2_gif_path, rcod_teaser_3_gif_path, rcod_teaser_4_gif_path,
+    rcod_screenshot_1_path, rcod_screenshot_2_path
 } from "./constants.js";
 import {useState} from "react";
 import {ToolsUsedBar} from "./ToolBar.jsx";
@@ -73,14 +74,27 @@ function Overview({ hoveredIndex, setCurrentView }) {
                 </ul>
             </div>
             <div className="justify-end">
-                <CyclingImage hoveredIndex={hoveredIndex}/>
+                <CyclingImage
+                    images={home_display_img_paths}
+                    imagesNames={home_display_img_names}
+                    hoveredIndex={hoveredIndex}
+                />
             </div>
         </>
     )
 }
 
 function Rcod({ name, index, setCurrentView }) {
+    const rcodTeaserGifs = [
+        rcod_screenshot_1_path,
+        rcod_teaser_1_gif_path,
+        rcod_teaser_2_gif_path,
+        rcod_teaser_3_gif_path,
+        rcod_screenshot_2_path,
+        rcod_teaser_4_gif_path,
+    ]
     const toolNames = ["Unity", "C#", "Python"]
+    const [hoveredIndex] = useState(null);
 
     return (
         <>
@@ -89,10 +103,10 @@ function Rcod({ name, index, setCurrentView }) {
                 <div className="grid grid-cols-2 gap-8">
                     <div className="justify-start">
                         <div className="aspect-[5/4] overflow-hidden rounded-xl shadow-lg">
-                            <img
-                                src={home_display_img_paths[index]}
-                                alt={name}
-                                className={`w-full h-full object-center object-cover scale-150 transition-opacity duration-300`}
+                            <CyclingImage
+                                images={rcodTeaserGifs}
+                                imagesNames={[""] * rcodTeaserGifs.length}
+                                hoveredIndex={hoveredIndex}
                             />
                         </div>
                     </div>
@@ -274,25 +288,5 @@ function ContextNavbar( { setCurrentView } ) {
             <FireButton onClick={() => setCurrentView("gis")} className="text-2xl font-bold px-9 py-6 rounded-lg text-white">GIS Anomaly Detector</FireButton>
         </div>
     </nav>
-    );
-}
-
-export function HoverImage( { path, name}) {
-    const [isHovered, setIsHovered] = useState(false);
-
-    return (
-        <div className="relative w-14 h-14">
-            <img
-                className="w-14 h-14 p-1 border-2 border-rose-300 hover:shadow-[0_0_25px_rgba(255,120,0,0.6)] focus:outline-none focus:ring-0"
-                src={path} alt="python"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            />
-            <div className="items-center font-bold absolute">
-                {isHovered && (
-                    <p>{name}</p>
-                )}
-            </div>
-        </div>
     );
 }
