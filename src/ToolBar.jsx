@@ -6,7 +6,7 @@ import {HoverImage} from "./HoverImage.jsx";
 export function SkillsBar({ skillList, nameList, proficiencyList }) {
     return (
         <>
-            <div className="inline-flex p-2 gap-4">
+            <div className="flex flex-wrap p-2 gap-4">
 
                 {skillList.map((skill, index) => (
                     <div key={index}>

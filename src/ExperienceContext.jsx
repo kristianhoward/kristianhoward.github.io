@@ -17,8 +17,32 @@ export function Experience() {
 
     return (
         <>
-            <div className="grid grid-cols-2 gap-8 w-full">
-                <div className="justify-start">
+            <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 w-full">
+                {/* Mobile: horizontal icon navbar */}
+                <div className="flex md:hidden flex-row overflow-x-auto gap-4 py-3 border-b border-pink-300">
+                    <button onClick={() => setText("automation")}
+                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-opacity ${currentContext === 'automation' ? 'opacity-100' : 'opacity-40'}`}>
+                        <img src={python_alt_path} className="w-12 h-12 border-2 border-rose-300" alt="automation"/>
+                        <span className="text-xs font-bold text-white">Auto</span>
+                    </button>
+                    <button onClick={() => setText("qa")}
+                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-opacity ${currentContext === 'qa' ? 'opacity-100' : 'opacity-40'}`}>
+                        <img src={qa_alt_path} className="w-12 h-12 border-2 border-rose-300" alt="qa"/>
+                        <span className="text-xs font-bold text-white">QA</span>
+                    </button>
+                    <button onClick={() => setText("unity")}
+                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-opacity ${currentContext === 'unity' ? 'opacity-100' : 'opacity-40'}`}>
+                        <img src={game_dev_alt_path} className="w-12 h-12 border-2 border-rose-300" alt="game dev"/>
+                        <span className="text-xs font-bold text-white">Game Dev</span>
+                    </button>
+                    <button onClick={() => setText("dad")}
+                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-opacity ${currentContext === 'dad' ? 'opacity-100' : 'opacity-40'}`}>
+                        <img src={father_alt_path} className="w-12 h-12 border-2 border-rose-300" alt="dad"/>
+                        <span className="text-xs font-bold text-white">Dad</span>
+                    </button>
+                </div>
+                {/* Desktop: vertical role list */}
+                <div className="hidden md:block justify-start">
                     <ul>
                         <li>
                             <h1 className="text-3xl font-bold pt-5">
@@ -115,7 +139,7 @@ export function Fatherhood() {
     const toolSkillRatings = ["S", "D", "B"]
     return (
         <>
-            <div className="flex items-center">
+            <div className="flex items-start w-full">
                 <ul>
                     <li>
                         <h1 className="text-3xl font-bold pt-6">
@@ -174,7 +198,7 @@ export function QualityAssurance() {
 
     return (
         <>
-            <div className="flex items-center">
+            <div className="flex items-start w-full">
                 <ul>
                     <li>
                         <h1 className="text-3xl font-bold pt-6">
@@ -240,7 +264,7 @@ export function Automation() {
 
     return (
         <>
-            <div className="flex items-center">
+            <div className="flex items-start w-full">
                 <ul>
                     <li>
                         <h1 className="text-3xl font-bold pt-6">
@@ -305,7 +329,7 @@ export function Unity() {
 
     return (
         <>
-            <div className="flex items-center">
+            <div className="flex items-start w-full">
                 <ul>
                     <li>
                         <h1 className="text-3xl font-bold pt-6">
@@ -370,7 +394,7 @@ export function Unity() {
 function CreditedWorks() {
     return (
         <>
-            <h1 className="text-3xl font-bold p-5 w-96">
+            <h1 className="text-3xl font-bold p-5 w-full md:w-96">
                 Credited Works
             </h1>
             <p className="pl-10">Puyo Puyo Tetris</p>

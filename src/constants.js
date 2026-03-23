@@ -33,6 +33,17 @@ import blockBuilderPath from "./assets/img/block_builder_alt.png"
 import jokeTellerPath from "./assets/img/dad_joke_alt.png"
 import ballPath from "./assets/img/ball_alt.png"
 import gameDevPath from "./assets/img/game_dev_alt.png"
+import propertyAppPath from "./assets/img/property_app.png"
+import propertyAppTeaser1 from "./assets/img/property_app_1.png"
+import propertyAppTeaser2 from "./assets/img/property_app_2.png"
+import propertyAppTeaser3 from "./assets/img/property_app_3.png"
+import propertyAppTeaser4 from "./assets/img/property_app_4.png"
+import propertyAppTeaser5 from "./assets/img/property_app_5.png"
+import propertyAppTeaser6 from "./assets/img/property_app_6.png"
+import reactPath from "./assets/img/react.png"
+import reactAlt from "./assets/img/react_alt.png"
+import typescriptPath from "./assets/img/typescript_alt.png"
+import postgresqlPath from "./assets/img/postgresql_alt.png"
 
 export const unity_img_path = unityPath;
 export const python_img_path = pythonPath;
@@ -56,6 +67,11 @@ export const block_builder_alt_path = blockBuilderPath;
 export const dad_joke_alt_path = jokeTellerPath;
 export const ball_alt_path = ballPath;
 export const game_dev_alt_path = gameDevPath;
+export const property_app_alt_path = propertyAppPath;
+export const react_path = reactPath;
+export const react_alt_path = reactAlt;
+export const typescript_alt_path = typescriptPath;
+export const postgresql_alt_path = postgresqlPath;
 
 export const technologies = {
     "Unity": unity_alt_path,
@@ -72,6 +88,9 @@ export const technologies = {
     "Tornado": tornado_alt_path,
     "QA": qa_alt_path,
     "Pytest": pytest_alt_path,
+    "React": react_alt_path,
+    "TypeScript": typescript_alt_path,
+    "Postgresql": postgresql_alt_path
 }
 
 export const linkedin_path = linkedinPath;
@@ -80,15 +99,9 @@ export const github_path = githubPath;
 export const linkedin_link = "https://www.linkedin.com/in/kristian-howard-jr/"
 export const github_link = "https://github.com/kristianhoward"
 
-export const home_display_img_paths = [
-    rcodTeaser3,
-    dndPath,
-    mapPath,
-    automationPath
-]
-
 export const home_display_img_names = [
     "Rogue Cards of Dungeon",
+    "Real Estate Portfolio App",
     "Pi DnD Display",
     "GIS Map Validation",
     "Traffic Signal Controller Automation"
@@ -103,3 +116,19 @@ export const rcod_teaser_1_gif_path = rcodTeaser1;
 export const rcod_teaser_2_gif_path = rcodTeaser2;
 export const rcod_teaser_3_gif_path = rcodTeaser3;
 export const rcod_teaser_4_gif_path = rcodTeaser4;
+
+export const property_app_path = propertyAppPath;
+export const property_app_teaser_1 = propertyAppTeaser1;
+export const property_app_teaser_2 = propertyAppTeaser2;
+export const property_app_teaser_3 = propertyAppTeaser3;
+export const property_app_teaser_4 = propertyAppTeaser4;
+export const property_app_teaser_5 = propertyAppTeaser5;
+export const property_app_teaser_6 = propertyAppTeaser6;
+
+export const home_display_img_paths = [
+    rcodTeaser3,
+    propertyAppPath,
+    dndPath,
+    mapPath,
+    automationPath,
+]

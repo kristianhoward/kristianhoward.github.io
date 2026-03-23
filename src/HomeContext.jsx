@@ -5,19 +5,19 @@ import {
     javascript_alt_path,
     playwright_alt_path,
     python_alt_path,
-    selenium_alt_path, sql_alt_path, unity_alt_path,
+    selenium_alt_path, sql_alt_path, unity_alt_path, typescript_alt_path, react_alt_path,
 } from "./constants.js";
 import {SkillsBar, SocialMediaBar} from "./ToolBar.jsx";
 
 export function Home() {
-    const skills = [python_alt_path, unity_alt_path, csharp_alt_path, playwright_alt_path, selenium_alt_path, sql_alt_path, javascript_alt_path];
-    const names = ["Python", "Unity", "C#", "Playwright", "Selenium", "SQL", "JavaScript"];
-    const proficiencies = ["S", "A", "A", "B", "C", "C", "C"];
+    const skills = [python_alt_path, unity_alt_path, csharp_alt_path, playwright_alt_path, javascript_alt_path, selenium_alt_path, sql_alt_path, react_alt_path, typescript_alt_path];
+    const names = ["Python", "Unity", "C#", "Playwright", "JavaScript", "Selenium", "SQL", "React", "TypeScript"];
+    const proficiencies = ["S", "A", "A", "B", "B", "C", "C", "C", "C"];
     const [hoveredIndex] = useState(null);
 
     return (<>
-        <div className="grid grid-cols-1 gap-8">
-            <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center">
                     <ul>
                         <li>
